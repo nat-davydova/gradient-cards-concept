@@ -74,6 +74,23 @@ body a {
     font-weight: 600;
 }
 
+.content {
+    margin: 60px auto;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
 .footer {
     margin-top: auto;
     padding: 15px;
