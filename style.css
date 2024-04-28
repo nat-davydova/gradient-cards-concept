@@ -6,16 +6,24 @@
     --transition-timing-function: linear;
     --transition-delay: 0s;
 
-    --text-color-demo: #2c2c2c;
+    --text-color-demo-dark: #2c2c2c;
+    --text-color-demo-light: #fff;
+
+    --bg-demo-light: #fff;
+    --bg-demo-dark: #2c2c2c;
+
 }
 
 html,
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: var(--text-color-demo);
+    color: var(--text-color-demo-dark);
 }
 
 /* DEMO STYLES: YOU DON'T NEED THEM!!! */
@@ -26,7 +34,8 @@ body a {
 
 .header {
     max-width: 500px;
-    margin: 50px auto 0;
+    padding-top: 50px;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -38,9 +47,6 @@ body a {
 }
 
 .header__btn {
-    --btn-bg-light: #fff;
-    --btn-bg-dark: #2c2c2c;
-    --text-color--light: #fff;
     --btn-border-color: #2c2c2c;
 
     transition:
@@ -50,7 +56,7 @@ body a {
             var(--transition-delay);
     padding: 10px 20px;
     margin-right: 10px;
-    background-color: var(--btn-bg-light);
+    background-color: var(--bg-demo-light);
     border: 2px solid var(--btn-border-color);
     border-radius: 3px;
     cursor: pointer;
@@ -59,11 +65,31 @@ body a {
 
 .header__btn:hover,
 .header__btn.js-active {
-    color: var(--text-color--light);
-    background-color: var(--btn-bg-dark);
+    color: var(--text-color-demo-light);
+    background-color: var(--bg-demo-dark);
 }
 
 .header__title {
     margin-bottom: 10px;
     font-weight: 600;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 15px;
+    color: var(--text-color-demo-light);
+    text-align: center;
+    background-color: var(--bg-demo-dark);
+}
+
+.footer__content p:first-child {
+    margin-top: 0;
+}
+
+.footer__content p:last-child {
+    margin-bottom: 0;
+}
+
+.footer__content a {
+    text-decoration: underline;
 }
