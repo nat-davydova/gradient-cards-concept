@@ -76,6 +76,7 @@ body a {
 
 .content {
     margin: 60px auto;
+    width: 100%;
 }
 
 .subtitle {
@@ -86,7 +87,9 @@ body a {
 
 .container {
     display: grid;
-    width: 900px;
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 30px;
 }
