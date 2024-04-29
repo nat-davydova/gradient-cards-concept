@@ -121,7 +121,23 @@ body a {
     align-items: center;
     padding: 50px 20px;
     text-align: center;
-    border: 1px solid;
+    background-image: linear-gradient(to right bottom, var(--gradient-start), var(--gradient-end));
+    border-radius: 10px;
+}
+
+.card:nth-child(1) {
+    --gradient-start: #FBDA61;
+    --gradient-end: #FF5ACD;
+}
+
+.card:nth-child(2) {
+    --gradient-start: #2af598;
+    --gradient-end: #009efd;
+}
+
+.card:nth-child(3) {
+    --gradient-start: #00DBDE;
+    --gradient-end: #FC00FF;
 }
 
 .card__icon {
