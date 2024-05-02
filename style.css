@@ -122,6 +122,8 @@ body a {
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
+    font-size: 17px;
+    font-weight: 500;
     color: var(--card-text-color);
     text-align: center;
     background-image: linear-gradient(to right bottom, var(--gradient-start), var(--gradient-end));
@@ -163,4 +165,16 @@ body a {
 
 .card__title h3 {
     margin: 0;
+}
+
+.card__descr {
+    margin-top: 20px;
+}
+
+.card__descr p:first-child {
+    margin-top: 0;
+}
+
+.card__descr p:last-child {
+    margin-bottom: 0;
 }
