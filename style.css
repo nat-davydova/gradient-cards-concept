@@ -178,3 +178,10 @@ body a {
 .card__descr p:last-child {
     margin-bottom: 0;
 }
+
+.card__price {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
