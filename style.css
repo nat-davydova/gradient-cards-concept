@@ -88,9 +88,9 @@ body a {
 .container {
     display: grid;
     width: 95%;
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 30px;
 }
 
@@ -121,28 +121,41 @@ body a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
+    gap: 20px;
+    padding: 40px 20px;
     font-size: 17px;
     font-weight: 500;
     color: var(--card-text-color);
     text-align: center;
-    background-image: linear-gradient(to right bottom, var(--gradient-start), var(--gradient-end));
+    background-image: linear-gradient(to right bottom, var(--card-gradient-start), var(--card-gradient-end));
     border-radius: 10px;
 }
 
 .card:nth-child(1) {
-    --gradient-start: #FAAC7A;
-    --gradient-end: #F64D82;
+    --card-gradient-start: #FAAC7A;
+    --card-gradient-end: #F64D82;
+
+    --btn-gradient-start: #FDC905;
+    --btn-gradient-end: #FEB036;
+    --btn-text-color: #FF3B8C;
 }
 
 .card:nth-child(2) {
-    --gradient-start: #5BAEDD;
-    --gradient-end: #644EDC;
+    --card-gradient-start: #5BAEDD;
+    --card-gradient-end: #644EDC;
+
+    --btn-gradient-start: #89FDFD;
+    --btn-gradient-end: #57DDE0;
+    --btn-text-color: #184BB0;
 }
 
 .card:nth-child(3) {
-    --gradient-start: #8C3FAE;
-    --gradient-end: #3B0E61;
+    --card-gradient-start: #8C3FAE;
+    --card-gradient-end: #3B0E61;
+
+    --btn-gradient-start: #D367FF;
+    --btn-gradient-end: #9738FF;
+    --btn-text-color: #3A0D60;
 }
 
 .card__icon {
@@ -157,7 +170,7 @@ body a {
 }
 
 .card__title {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -165,10 +178,6 @@ body a {
 
 .card__title h3 {
     margin: 0;
-}
-
-.card__descr {
-    margin-top: 20px;
 }
 
 .card__descr p:first-child {
@@ -180,8 +189,25 @@ body a {
 }
 
 .card__price {
-    margin-top: 20px;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+.card__btn-wrapper {
+    margin-top: 10px;
+}
+
+.card__btn {
+    padding: 15px 70px;
+    color: var(--btn-text-color);
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, var(--btn-gradient-start), var(--btn-gradient-end));
+    background-color: transparent;
+    cursor: pointer;
 }
