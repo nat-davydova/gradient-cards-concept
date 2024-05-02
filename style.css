@@ -116,28 +116,31 @@ body a {
 
 /* CARDS STYLES: YOU NEED THEM!!! */
 .card {
+    --card-text-color: #fff;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
+    color: var(--card-text-color);
     text-align: center;
     background-image: linear-gradient(to right bottom, var(--gradient-start), var(--gradient-end));
     border-radius: 10px;
 }
 
 .card:nth-child(1) {
-    --gradient-start: #FBDA61;
-    --gradient-end: #FF5ACD;
+    --gradient-start: #FAAC7A;
+    --gradient-end: #F64D82;
 }
 
 .card:nth-child(2) {
-    --gradient-start: #2af598;
-    --gradient-end: #009efd;
+    --gradient-start: #5BAEDD;
+    --gradient-end: #644EDC;
 }
 
 .card:nth-child(3) {
-    --gradient-start: #00DBDE;
-    --gradient-end: #FC00FF;
+    --gradient-start: #8C3FAE;
+    --gradient-end: #3B0E61;
 }
 
 .card__icon {
