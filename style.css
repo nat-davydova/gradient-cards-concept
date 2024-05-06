@@ -119,15 +119,6 @@ body a {
     --card-text-color: #fff;
 
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--card-text-color);
-    text-align: center;
     background-image: linear-gradient(to right bottom, var(--card-gradient-start), var(--card-gradient-end));
     border-radius: 10px;
 }
@@ -135,6 +126,7 @@ body a {
 .card:before {
     position: absolute;
     top: 5%;
+    left: 5%;
     display: block;
     width: 90%;
     height: 95%;
@@ -180,6 +172,45 @@ body a {
 
     --card-shadow-gradient-start: #3B0E61;
     --card-shadow-gradient-end: #D367FF;
+}
+
+.card__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--card-text-color);
+    text-align: center;
+    overflow: hidden;
+}
+
+.card__content:before,
+.card__content:after {
+    --rotation: -101deg;
+
+    position: absolute;
+    top: 0;
+    right: -250px;
+    display: block;
+    width: var(--dimensions);
+    height: var(--dimensions);
+    content: '';
+    background-image: conic-gradient(from 90deg, rgba(255, 255, 255, .2), transparent);
+    border-radius: 50%;
+    transform: rotate(var(--rotation));
+}
+
+.card__content:before {
+    --dimensions: 400px;
+}
+
+
+.card__content:after {
+    --dimensions: 370px;
 }
 
 .card__icon {
