@@ -118,6 +118,7 @@ body a {
 .card {
     --card-text-color: #fff;
 
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,6 +132,20 @@ body a {
     border-radius: 10px;
 }
 
+.card:before {
+    position: absolute;
+    top: 5%;
+    display: block;
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    content: '';
+    background-image: linear-gradient(to right, var(--card-shadow-gradient-start), var(--card-shadow-gradient-end));
+    filter: blur(10px);
+    z-index: -1;
+}
+
+
 .card:nth-child(1) {
     --card-gradient-start: #FAAC7A;
     --card-gradient-end: #F64D82;
@@ -138,6 +153,9 @@ body a {
     --btn-gradient-start: #FDC905;
     --btn-gradient-end: #FEB036;
     --btn-text-color: #FF3B8C;
+
+    --card-shadow-gradient-start: #deaf00;
+    --card-shadow-gradient-end: #FF3B8C;
 }
 
 .card:nth-child(2) {
@@ -147,6 +165,9 @@ body a {
     --btn-gradient-start: #89FDFD;
     --btn-gradient-end: #57DDE0;
     --btn-text-color: #184BB0;
+
+    --card-shadow-gradient-start: #644EDC;
+    --card-shadow-gradient-end: #57DDE0;
 }
 
 .card:nth-child(3) {
@@ -156,6 +177,9 @@ body a {
     --btn-gradient-start: #D367FF;
     --btn-gradient-end: #9738FF;
     --btn-text-color: #3A0D60;
+
+    --card-shadow-gradient-start: #3B0E61;
+    --card-shadow-gradient-end: #D367FF;
 }
 
 .card__icon {
