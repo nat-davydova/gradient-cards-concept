@@ -205,9 +205,14 @@ body a {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    transition: transform 0.2s linear 0s;
     border: none;
     border-radius: 100px;
     background-image: linear-gradient(to right, var(--btn-gradient-start), var(--btn-gradient-end));
     background-color: transparent;
     cursor: pointer;
+}
+
+.card__btn:hover {
+    transform: scale(1.05);
 }
