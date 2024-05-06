@@ -214,18 +214,28 @@ body a {
 }
 
 .card__icon {
-    --card-icon-dimensions: 120px;
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
 
-    width: var(--card-icon-dimensions);
-    height: var(--card-icon-dimensions);
+.card__icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    fill: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    z-index: 1;
 }
 
 .card__icon img {
-    width: 100%;
+    position: relative;
+    width: 70%;
+    z-index: 2;
 }
 
 .card__title {
-    margin-top: 20px;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
