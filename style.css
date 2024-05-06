@@ -148,6 +148,8 @@ body a {
 
     --card-shadow-gradient-start: #deaf00;
     --card-shadow-gradient-end: #FF3B8C;
+
+    --icon-decorations-gradient: #FDC905;
 }
 
 .card:nth-child(2) {
@@ -160,6 +162,8 @@ body a {
 
     --card-shadow-gradient-start: #644EDC;
     --card-shadow-gradient-end: #57DDE0;
+
+    --icon-decorations-gradient: #29faff;
 }
 
 .card:nth-child(3) {
@@ -172,6 +176,8 @@ body a {
 
     --card-shadow-gradient-start: #3B0E61;
     --card-shadow-gradient-end: #D367FF;
+
+    --icon-decorations-gradient: #d97bff;
 }
 
 .card__content {
@@ -219,20 +225,38 @@ body a {
     height: 150px;
 }
 
+.card__icon:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image:
+            radial-gradient(circle closest-side, var(--icon-decorations-gradient) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--icon-decorations-gradient) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--icon-decorations-gradient) 100%, rgba(255,255,255,0) 0);
+    background-size: 15px 15px, 20px 20px, 15px 15px;
+    background-position: 20px 20px, 160px 60px, 40px 90px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
 .card__icon svg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    fill: rgba(255, 255, 255, .2);
-    backdrop-filter: blur(10px);
-    z-index: 1;
+    fill: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(7px);
+    z-index: 2;
 }
 
 .card__icon img {
     position: relative;
     width: 70%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .card__title {
