@@ -260,9 +260,11 @@ body a {
 }
 
 .card__title {
+    position: relative;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    z-index: 2;
 }
 
 .card__title h3 {
